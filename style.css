@@ -1,0 +1,255 @@
+/* =========================
+   RESET & BASE STYLES
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-margin-top: 100px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    justify-content: center;
+    align-items: center;
+    background-color:#dadbd3;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+header {
+    position: sticky;
+    top: 0;
+    background: #9aa07f;
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ebeedf;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    color: #ebeedf;
+    font-weight:bolder;
+}
+
+.nav-links a {
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+
+}
+
+.nav-links a:hover {
+    color:#f59e0b ;
+}
+
+
+/* =========================
+   HERO SECTION
+   ========================= */
+.hero {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: #111827; /* fallback */
+}
+
+.hero-text h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    color:#966321;
+}
+
+/* Individual colors */
+.hero-text .hello {
+    color: #57573e; /* blue */
+}
+
+.hero-text .im {
+    color: #57573e; /* dark (same as base) */
+}
+
+.hero-text .name {
+    color: #966321; /* accent / mustard */
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #4b5563;
+}
+
+/* HERO BUTTONS */
+.hero-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #787c63;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #bec599;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #787c63;
+    border: 2px solid #78763c;
+}
+
+.btn-secondary:hover {
+    background-color: #bec599;
+    color: white;
+}
+
+/* HERO IMAGE */
+.hero-image {
+    flex: 1;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding-top: 50px;
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+.section {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #dbd5b3;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #57573e;
+}
+
+.section p, .section ul {
+    font-size: 1.1rem;
+    color: #4b5563;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+li a:hover {
+    color: #866635;
+    text-decoration: underline;
+}
+
+/* CONTACT BUTTONS */
+.contact-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact-buttons .btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-buttons .btn svg {
+    margin: 0;
+} 
+
+.btn-github {
+    background-color: #787c63;
+    color: #ffffff;
+}
+
+/* Hover effect */
+.contact-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 250px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
